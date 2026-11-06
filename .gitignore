@@ -1,0 +1,17 @@
+# Firmware Secrets
+**/secrets.h
+**/*.pem
+
+# Web/Backend Secrets
+**/.env
+**/.env.local
+**/firebase-config.js
+
+# OS and IDE junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__MACOSX/
+*.zip
+*.rar

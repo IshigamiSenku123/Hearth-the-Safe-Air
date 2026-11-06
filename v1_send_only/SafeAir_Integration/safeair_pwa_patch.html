@@ -1,0 +1,45 @@
+<!--
+  SafeAir PWA Integration Patch
+  ======================================
+  This shows exactly what to change in your existing safeair.html
+
+  STEP 1: In the <head>, AFTER your existing <link> tags, add:
+-->
+
+<script type="module" src="./pwa_firebase_bridge.js"></script>
+
+<!--
+  STEP 2: In your existing JavaScript, find where state.sensors is initialized
+  with fake data (around the CH.forEach loop), and COMMENT IT OUT.
+
+  OLD CODE TO COMMENT OUT:
+
+    CH.forEach(c=>{
+      const h=[];
+      let v=c.base;
+      for(let i=0;i<64;i++){...}
+      state.sensors[c.key]={value:h[h.length-1],history:h};
+    });
+
+  NEW: The pwa_firebase_bridge.js will populate state.sensors automatically
+  via the onValue() subscription.
+
+  STEP 3: In your existing button click handler (the big switch statement),
+  the bridge.js already intercepts clicks via DOMContentLoaded.
+  But if you prefer, you can also add cases to your existing switch:
+
+    case 'alarm:silence':
+      if (window.sendDeviceCommand) sendDeviceCommand(state.quiet ? 'unmute' : 'mute');
+      break;
+    case 'alarm:test':
+      if (window.sendDeviceCommand) sendDeviceCommand('test');
+      break;
+    case 'ctrl:arm':
+      if (window.sendDeviceCommand) sendDeviceCommand(state.armed ? 'disarm' : 'arm');
+      break;
+    case 'supp:toggle':
+      if (window.sendDeviceCommand) sendDeviceCommand(state.suppression ? 'pump_disarm' : 'pump_arm');
+      break;
+
+  STEP 4: That's it. Open safeair.html in a browser. It will now show live data.
+-->

@@ -1,0 +1,73 @@
+{
+  "rules": {
+    // -------------------------------------------------------------------------
+    // MVP (Phase 1): permissive — anyone with the deviceId can read/write.
+    // Phase 2: replace with auth.uid-based rules.
+    // -------------------------------------------------------------------------
+
+    "devices": {
+      "$deviceId": {
+        // Allow read if you know the deviceId (MVP). Phase 2: require auth.
+        ".read": "true",
+        ".write": "true",
+
+        // Telemetry: device writes, app reads. Keep last N via Cloud Function.
+        "telemetry": {
+          ".indexOn": ["ts"]
+        },
+
+        // Heartbeat: device writes periodically.
+        "heartbeat": {
+          ".indexOn": ["ts"]
+        },
+
+        // Commands: app writes, device reads & deletes after execution.
+        "commands": {
+          "$cmdId": {
+            ".validate": "newData.hasChildren(['type', 'ts'])"
+          }
+        },
+
+        // Ack: device writes, app reads.
+        "ack": {
+          ".indexOn": ["ts"]
+        },
+
+        // Logs: device pushes, app reads.
+        "logs": {
+          "$pushId": {
+            ".validate": "newData.hasChildren(['t','lvl','title'])"
+          }
+        },
+
+        // Meta: device info, thresholds, config.
+        "meta": {
+          "thresholds": {
+            ".validate": "newData.hasChildren(['mq2_w','mq2_d','mq4_w','mq4_d','tmp_w','tmp_d','smk_w','smk_d'])"
+          }
+        },
+
+        // Alerts: Cloud Function writes when danger detected.
+        "alerts": {
+          "$alertId": {
+            ".indexOn": ["ts"],
+            ".validate": "newData.hasChildren(['level','ts','sensor'])"
+          }
+        }
+      }
+    },
+
+    // User profiles (Phase 2 — stubbed for auth migration)
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid",
+        "devices": {
+          "$deviceId": {
+            ".validate": "newData.isBoolean() || newData.val() == null"
+          }
+        }
+      }
+    }
+  }
+}
