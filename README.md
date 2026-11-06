@@ -1,6 +1,6 @@
 # 🔥 Hearth (SafeAir)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24024338.svg)](https://doi.org/10.5281/zenodo.24024338)
-[![License: MIT](httpsimg.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **An open-source, versioned reference project for IoT safety devices.** An ESP32 streams sensor telemetry to Firebase Realtime Database, and a web app or Progressive Web App displays it live and sends commands **back** to the physical device.
 
 SafeAir is the stove-safety build of the Hearth framework. It watches the air in a kitchen for LPG, methane, smoke and heat, sounds the alarm before things get dangerous, can trigger a suppression pump, and lets you act from your phone. The good thing is that you dont even have to be connected to same wifi , i,e you could be in another city and could still receive logs and control your device.
@@ -376,24 +376,6 @@ Firebase, Espressif, Arduino Communities
 
 ## 📜 License
 
-MIT License
+[![License: MIT](httpsimg.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Copyright (c) 2026 Muhammad Nouman, Faysal Ali Shah, Zimal Chohan, Alishba Shahwaiz, Fazila Iqbal
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
