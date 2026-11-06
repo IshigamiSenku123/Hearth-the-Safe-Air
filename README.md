@@ -1,9 +1,9 @@
 # 🔥 Hearth (SafeAir)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24024338.svg)](https://doi.org/10.5281/zenodo.24024338)
-
+[![License: MIT](httpsimg.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 **An open-source, versioned reference project for IoT safety devices.** An ESP32 streams sensor telemetry to Firebase Realtime Database, and a web app or Progressive Web App displays it live and sends commands **back** to the physical device.
 
-SafeAir is the stove-safety build of the Hearth framework. It watches the air in a kitchen for LPG, methane, smoke and heat, sounds the alarm before things get dangerous, can trigger a suppression pump, and lets you act from your phone.
+SafeAir is the stove-safety build of the Hearth framework. It watches the air in a kitchen for LPG, methane, smoke and heat, sounds the alarm before things get dangerous, can trigger a suppression pump, and lets you act from your phone. The good thing is that you dont even have to be connected to same wifi , i,e you could be in another city and could still receive logs and control your device.
 
 > Gas leaks and kitchen fires happen in seconds. SafeAir is designed to notice first, warn loudly, and let you act from anywhere.
 
