@@ -9,9 +9,9 @@ SafeAir is the stove-safety build of the Hearth framework. It watches the air in
 ---
 ## 📸 Project Showcase
 
-| Live Dashboard (PWA) | Physical Prototype (ESP32 + MQ Sensors) |
+| Live Dashboard (PWA) | Physical Prototype (ESP32 + Sensors) |
 |:---:|:---:|
-| ![App Interface](docs/app_dashboard.png) | ![Hardware Setup](docs/hardware_prototype.jpeg) |
+| ![Dashboard Screenshot](./docs/images/app_dashboard.png) | ![Hardware Photo](./docs/images/hardware_prototype.jpeg) |
 | *Real-time gas/smoke monitoring with alarm controls.* | *Veroboard assembly with OLED display & relay module.* |
 ## Quick Start — How to Use This Repository
 
@@ -369,10 +369,30 @@ Hearth/
 
 ## 🧩 Acknowledgments
 
-Built as a hands-on project combining embedded systems, real-time cloud data and mobile-friendly web design. Thanks to the Espressif, Firebase and Arduino communities for the tools and documentation that made it possible.
+Firebase, Espressif, Arduino Communities
 
 ---
 
 ## 📜 License
 
-Add your preferred license here (MIT is a good default for open hardware and software projects).
+MIT License
+
+Copyright (c) 2026 Muhammad Nouman, Faysal Ali Shah, Zimal Chohan, Alishba Shahwaiz, Fazila Iqbal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
