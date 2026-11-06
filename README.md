@@ -1,5 +1,5 @@
 # 🔥 Hearth (SafeAir)
-24024338
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24024338.svg)](https://doi.org/10.5281/zenodo.24024338)
 
 **An open-source, versioned reference project for IoT safety devices.** An ESP32 streams sensor telemetry to Firebase Realtime Database, and a web app or Progressive Web App displays it live and sends commands **back** to the physical device.
 
